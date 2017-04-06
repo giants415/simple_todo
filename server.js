@@ -23,8 +23,15 @@ app.get('/todo', (req,res) => {
 
 app.post('/todo', (req,res) => {
   var newTodo = Todo(req.body).save((err,data) => {
-    if (err) throw err;
-    console.log(data);
+    if (err) {console.log(err)};
+    res.json(data);
+  });
+});
+
+app.delete('/todo/:item', (req,res) => {
+  var todoId = req.params.item;
+  Todo.findOneAndRemove({ item: todoId }, (err, data) => {
+    if (err) {console.log(err)};
     res.json(data);
   });
 });
