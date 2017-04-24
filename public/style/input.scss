@@ -1,3 +1,24 @@
-li {
-  cursor: pointer;
+.container {
+  background-color: rgba(25,150,200,.8);
+  margin-top: 1em;
+  border: 2px solid black;
+  max-width: 500px;
+  padding-bottom: 3em;
+  h1{
+    margin: .5em 0;
+    text-align: center;
+  }
+  li {
+    cursor: pointer;
+    list-style: none;
+    font-size: 1.5em;
+    margin-left: 3em;
+  }
+  li:hover{
+    text-decoration: underline;
+  }
+  #todoForm {
+    margin-bottom: 2em;
+    text-align: center;
+  }
 }
