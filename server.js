@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 
 //ROUTES
-app.get('/todo', (req,res) => {
+app.get('/', (req,res) => {
   Todo.find( {}, (err, data) => {
     if (err) throw err;
     res.render('index', {todos: data});
